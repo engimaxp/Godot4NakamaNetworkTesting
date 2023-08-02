@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://ng43lmwjewgc"]
+
+[ext_resource type="Script" path="res://src/server/ready_sign.gd" id="1_juaut"]
+
+[node name="ReadySign" type="HBoxContainer"]
+script = ExtResource("1_juaut")
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Ready" type="Label" parent="."]
+layout_mode = 2

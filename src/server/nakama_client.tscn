@@ -1,0 +1,134 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnnip61hcypg8"]
+
+[ext_resource type="Script" path="res://src/server/nakama_client.gd" id="1_law8q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ali7o"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_todov"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0yfok"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 1)
+
+[node name="NakamaClient" type="Node"]
+script = ExtResource("1_law8q")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RegistLoginPanel" type="PanelContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+offset_right = 235.0
+offset_bottom = 187.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/RegistLoginPanel"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/RegistLoginPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/RegistLoginPanel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "email"
+
+[node name="Email" type="LineEdit" parent="CanvasLayer/RegistLoginPanel/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "enpfighter@gmail.com"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/RegistLoginPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/RegistLoginPanel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "password"
+
+[node name="Password" type="LineEdit" parent="CanvasLayer/RegistLoginPanel/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1123581321nk"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/RegistLoginPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/RegistLoginPanel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "username"
+
+[node name="UserName" type="LineEdit" parent="CanvasLayer/RegistLoginPanel/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "enpfighter"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/RegistLoginPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/RegistLoginPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Regist" type="Button" parent="CanvasLayer/RegistLoginPanel/VBoxContainer/HBoxContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Regist"
+
+[node name="Login" type="Button" parent="CanvasLayer/RegistLoginPanel/VBoxContainer/HBoxContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Login"
+
+[node name="FindingMatch" type="PanelContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_right = 235.0
+offset_bottom = 186.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ali7o")
+
+[node name="Matching" type="Label" parent="CanvasLayer/FindingMatch"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "Match Finding..."
+horizontal_alignment = 1
+
+[node name="FindMatch" type="Button" parent="CanvasLayer/FindingMatch"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_todov")
+text = "FindMatch"
+
+[node name="ReadyScreen" type="PanelContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+offset_right = 235.0
+offset_bottom = 186.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ali7o")
+
+[node name="MatchReady" type="Label" parent="CanvasLayer/ReadyScreen"]
+layout_mode = 2
+text = "Match Ready"
+horizontal_alignment = 1
+
+[node name="ReadySignPanel" type="PanelContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_right = 237.0
+offset_bottom = 185.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0yfok")
+
+[node name="ReadySignContainer" type="VBoxContainer" parent="CanvasLayer/ReadySignPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="IMReady" type="Button" parent="CanvasLayer/ReadySignPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "I'm Ready"
